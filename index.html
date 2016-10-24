@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <div class="container">
+        <div class="wrapper">
+          <form class="col s12 center-align" action="profile.php" method="post" enctype="multipart/form-data">
+            <p>Basic Info</p>
+            <div class="row">
+              <div class="file-field col s12 center-align">
+                <div class="center-align">
+                  <div class="circular">
+                    <input class="file-upload" type="file" name="profile-image" value="" accept="image/*"  required="true">
+                    <img  class="profile-img" src="img/emptyprofileimage.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="text" name="fullName" required="true">
+                <label>Full Name</label>
+              </div>
+              <div class="input-field col s6">
+                <select name="gender"  required="true">
+                  <option value="" disabled selected>Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="date" class="datepicker" name="dob">
+                <label>Date of Birth</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="number" name="experience" min="1" max="50" maxlength="2">
+                <label>Years of experience</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="text" name="industry">
+                <label>Industry</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" name="location">
+                <label>Location</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea class="materialize-textarea" name="aboutMe"></textarea>
+                <label>About Me</label>
+              </div>
+            </div>
+            <p>Skills</p>
+            <div class="row">
+              <div class="input-field col s6 ">
+                <input type="text" name="profTitle">
+                <label>Professional Title</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" name="careerLevel">
+                <label>Career Level</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                  <input type="number" name="commlvl" min="1" max="100" maxlength="3">
+                  <label>Communication level (1-100)%</label>
+              </div>
+              <div class="input-field col s12">
+                  <input type="number" name="orglvl" min="1" max="100" maxlength="3">
+                  <label>Organizational level (1-100)%</label>
+              </div>
+              <div class="input-field col s12">
+                  <input type="number" name="jobrellvl" min="1" max="100" maxlength="3">
+                  <label>Job Related level (1-100)%</label>
+              </div>
+            </div>
+            <p>Contact</p>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" name="Address"  required="true">
+                <label>Address</label>
+              </div>
+              <div class="input-field col s12">
+                <input type="tel" name="phone" maxlength="11" required="true">
+                <label>Phone Number</label>
+              </div>
+              <div class="input-field col s12">
+                <input type="url" name="website">
+                <label>Website</label>
+              </div>
+              <div class="input-field col s12">
+                <input type="email" name="_email"  required="true">
+                <label>E-mail</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input class="btn" type="submit" name="submit" value="Submit">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/form.js"></script>
+    </body>
+  </html>
